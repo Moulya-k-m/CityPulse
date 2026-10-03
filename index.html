@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityPulse | Report Urban Problems</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header class="header">
+    <div class="logo">CityPulse</div>
+    <p>Report urban problems. Help build a better city.</p>
+</header>
+
+
+<main>
+
+    <section class="hero">
+        <h1>Make your city better.</h1>
+        <p>
+            Spotted a problem in your area?
+            Report it and help bring attention to issues that matter.
+        </p>
+    </section>
+
+
+    <section class="report-section">
+
+        <div class="section-heading">
+            <h2>Report a Problem</h2>
+            <p>Tell us what is happening in your area.</p>
+        </div>
+
+
+        <form id="report">
+
+            <div class="form-group">
+                <label for="problems">Problem Type</label>
+
+                <select name="problems" id="problems">
+                    <option value="Waterlogging">Waterlogging</option>
+                    <option value="Garbage">Garbage</option>
+                    <option value="Street Lights">Street Lights</option>
+                    <option value="Road Damage">Road Damage</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="description">Description</label>
+
+                <textarea
+                    name="description"
+                    id="description"
+                    placeholder="Describe the problem..."
+                    rows="4"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+    <label for="image">Upload Image</label>
+
+    <input
+        type="file"
+        id="image"
+        accept="image/*"
+    >
+</div>
+
+
+            <div class="form-group">
+                <label for="location">Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="e.g. MG Road, Bengaluru"
+                    required
+                >
+            </div>
+
+
+            <button type="submit">
+                Submit Report
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="reports-section">
+
+        <div class="reports-header">
+            
+
+    <div>
+        <h2>Community Reports</h2>
+        <p>Problems reported by citizens.</p>
+    </div>
+
+    <div class="report-tools">
+
+        <select id="filter">
+            <option value="All">All Problems</option>
+            <option value="Waterlogging">Waterlogging</option>
+            <option value="Garbage">Garbage</option>
+            <option value="Street Lights">Street Lights</option>
+            <option value="Road Damage">Road Damage</option>
+        </select>
+
+        <div class="report-count">
+            <span id="reportCount">0</span>
+            <small>Reports</small>
+        </div>
+
+    </div>
+
+</div>
+
+        <div id="container"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>CityPulse • Making communities better, one report at a time.</p>
+</footer>
+
+
+
+<!-- EDIT REPORT MODAL -->
+
+<div id="editModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Edit Report</h2>
+
+        <div class="form-group">
+            <label for="editDescription">Description</label>
+            <textarea
+                id="editDescription"
+                rows="4"
+                placeholder="Describe the problem..."
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="editLocation">Location</label>
+            <input
+                type="text"
+                id="editLocation"
+                placeholder="Enter the location"
+            >
+        </div>
+
+        <div class="modal-buttons">
+            <button id="saveEdit">Save Changes</button>
+            <button id="cancelEdit">Cancel</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>
