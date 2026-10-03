@@ -2,6 +2,8 @@
 
 ### *Report urban problems. Help build a better city.*
 
+🔗 **Live Demo:** https://moulya-k-m.github.io/CityPulse/
+
 CityPulse is a web-based civic reporting application that makes it simple for people to report everyday urban problems and bring attention to issues that affect their community.
 
 From **garbage and waterlogging to damaged roads and street-light problems**, CityPulse allows users to create, manage, and organize reports through a simple and user-friendly web interface.
